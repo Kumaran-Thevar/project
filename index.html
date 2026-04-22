@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CertiChain</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            flex-direction: column;
+        }
+
+        .loader {
+            border: 6px solid rgba(255,255,255,0.3);
+            border-top: 6px solid white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 28px;
+        }
+
+        p {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader"></div>
+    <h1>CertiChain</h1>
+    <p>Secure Certificate Verification System</p>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = "http://127.0.0.1:5000";
+        }, 2500);
+    </script>
+
+</body>
+</html>
