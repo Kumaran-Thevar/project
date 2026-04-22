@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bulk Upload</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1 class="navbar-title">Certificate System</h1>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/issue">Issue</a>
+        <a href="/bulk">Bulk Upload</a>
+        <a href="/verify">Verify</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="dashboard">
+    <h1>Bulk Certificate Upload</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload & Generate</button>
+        <p>
+Upload an Excel (.xlsx) or CSV file to generate certificates in bulk. The file must contain the required fields such as Name, Course, Department, and Email. The system automatically standardizes column order, so the arrangement of columns does not matter as long as the headers are correctly named. Once uploaded, certificates will be generated, securely stored, recorded on the blockchain, and emailed individually to each recipient. Ensure that email IDs are valid to avoid delivery failures.
+</p>
+    </form>
+
+    {% if results %}
+    <div class="success-box">
+        <h2>Results</h2>
+        {% for name, status in results %}
+            <p>{{name}} → {{status}}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

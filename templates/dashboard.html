@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1 class="navbar-title">Certificate System</h1>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/issue">Issue</a>
+        <a href="/bulk">Bulk Upload</a>
+        <a href="/verify">Verify</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="dashboard">
+<h1>Dashboard</h1>
+
+<div class="stats">
+<div class="card"><h3>{{total}}</h3><h3>Total</h3></div>
+<div class="card"><h3>{{sent}}</h3><h3>Sent</h3></div>
+<div class="card"><h3>{{failed}}</h3><h3>Failed</h3></div>
+<div class="card"><h3>{{success_rate}}%</h3><h3>Success</h3></div>
+</div>
+
+<h2>Recent</h2>
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+
+        {% for r in recent %}
+        <tr>
+            <td>{{r[0]}}</td>
+            <td>{{r[1]}}</td>
+            <td>{{r[2]}}</td>
+            <td>{{r[3]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</div>
+</body>
+</html>

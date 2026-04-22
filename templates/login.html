@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="navbar">
+    <h1 class="navbar-title">Certificate System</h1>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/issue">Issue</a>
+        <a href="/bulk">Bulk Upload</a>
+        <a href="/verify">Verify</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+<div class="login-container">
+    <h1>Certificate System</h1>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="email" name="email" placeholder="Enter Email" required>
+
+        <div class="password-box">
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <i class="fa-solid fa-eye" id="togglePassword"></i>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+const toggle = document.getElementById("togglePassword");
+const password = document.getElementById("password");
+
+toggle.addEventListener("click", function () {
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+
+    this.classList.toggle("fa-eye");
+    this.classList.toggle("fa-eye-slash");
+});
+</script>
+
+</body>
+</html>

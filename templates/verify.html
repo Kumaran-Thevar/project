@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Certificate</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="navbar">
+    <h1 class="navbar-title">Certificate System</h1>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/issue">Issue</a>
+        <a href="/bulk">Bulk Upload</a>
+        <a href="/verify">Verify</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+<div class="login-container">
+    <h2>Verify Certificate</h2>
+
+    <form method="POST">
+        <input type="text" name="hash" placeholder="Enter Certificate Hash" required>
+        <button type="submit">Verify</button>
+    </form>
+
+    {% if result is not none %}
+        <p>{{ "Valid Certificate ✅" if result else "Invalid Certificate ❌" }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

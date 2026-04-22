@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* LOGIN */
+.login-container {
+    width: 350px;
+    margin: 120px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* DASHBOARD */
+.dashboard {
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 40px;
+    width: 200px;
+    background: white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.logout {
+    background: #ff6b6b;
+    color: white;
+}
+
+.logout:hover {
+    background: #ee5253;
+}
+/* PASSWORD FIELD WITH EYE ICON */
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 40px;
+}
+
+.password-box i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    transition: 0.3s;
+}
+
+.password-box i:hover {
+    color: #667eea;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.form-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+.form-box h3 {
+    margin-bottom: 15px;
+}
+
+.form-box input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+}
+.success-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f0fff4;
+    border-left: 5px solid #38a169;
+    border-radius: 10px;
+    color: #000;   /* 🔥 FORCE BLACK TEXT */
+}
+
+.success-box h2 {
+    color: #000;
+}
+
+.success-box p {
+    color: #000;
+    font-size: 16px;
+}
+
+.success-box b {
+    color: #000;
+}
+
+.success-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #38a169;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a202c;
+    padding: 15px 30px;
+    color: white;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #38a169;
+}
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f5f5f5;
+    color: #000;   /* 🔥 FORCE DARK TEXT */
+}
+
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    background:#1a202c;
+    color:white;
+    padding:15px;
+}
+
+.nav-links a {
+    color:white;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.dashboard { padding:20px; }
+
+.stats { display:flex; gap:20px; }
+
+.card {
+    background:#1a202c;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    flex:1;
+    text-align:center;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: #ffffff;   /* white background */
+    color: #000;           /* black text */
+}
+
+th {
+    background: #1a202c;
+    color: white;
+}
+
+td {
+    color: #000;
+}
+/* Specific page headings */
+.dashboard h1,
+.dashboard h2 {
+    color: #000;
+}
+
+.issue-page h1 {
+    color: #000;
+}
+
+.bulk-page h1 {
+    color: #000;
+}
+.navbar-title {
+    color: #ffffff !important;
+}
+p {
+    color: #000 !important;
+}
+input[type="file"] {
+    color: #000; /* fallback */
+}
+
+input[type="file"]::file-selector-button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: #ffffff;
+    color: #000;
+    cursor: pointer;
+}
+.table-container {
+    max-height: 400px;   /* 🔥 scroll after this height */
+    overflow-y: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.table-container thead th {
+    position: sticky;
+    top: 0;
+    background: #1a202c;
+    color: white;
+    z-index: 1;
+}

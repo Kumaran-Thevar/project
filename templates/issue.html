@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Issue Certificate</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="navbar">
+    <h1 class="navbar-title">Certificate System</h1>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/issue">Issue</a>
+        <a href="/bulk">Bulk Upload</a>
+        <a href="/verify">Verify</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+<div class="dashboard">
+    <h1>Issue Certificate</h1>
+
+    <form method="POST" class="form-box">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="course" placeholder="Course" required>
+        <input type="text" name="department" placeholder="Department" required>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <button type="submit">Generate Certificate</button>
+        <p>
+Enter the required details to generate an individual certificate. Upon submission, a unique hash is created and stored on the blockchain to ensure authenticity and integrity. The certificate is generated in PDF format, embedded with a QR code for instant verification, and automatically sent to the recipient via email. Please verify all details before submission to ensure accurate certificate issuance.
+</p>
+    </form>
+
+    {% if success %}
+    <div class="success-box">
+        <h2>Certificate Generated</h2>
+        <p><b>Hash:</b> {{hash}}</p>
+        <p><b>Issued At:</b> {{time}}</p>
+        <p>{{email_status}}</p>
+
+        <a href="/download/{{pdf.split('/')[-1]}}" target="_blank">Download PDF</a>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
